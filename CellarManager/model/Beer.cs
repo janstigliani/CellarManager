@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CellarManager.model
 {
-    internal class Beer
+    internal class Beer : Beverage
     {
+        public string Style { get; set; }
+
+        public Beer(string name, double degree, string style) : base(name, degree)
+        {
+            Style = style;
+        }
     }
 }

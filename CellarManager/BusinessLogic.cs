@@ -21,16 +21,19 @@ namespace CellarManager
         {
             var beer = new Beer(name, degree, style);
             Beverages.Add(beer);
+            _storage.SaveAllBeverages(Beverages);
         }
 
-        public void AddWine(string name, double degree, string vite)
+        public void AddWine(string name, double degree, string vite, string color)
         {
-            throw new NotImplementedException();
+            var wine = new Wine(name, degree, vite, color);
+            Beverages.Add(wine);
+            _storage.SaveAllBeverages(Beverages);
         }
 
         public List<Beverage> GetAllBeverages()
         {
-            throw new NotImplementedException();
+            return Beverages;
         }
     }
 }

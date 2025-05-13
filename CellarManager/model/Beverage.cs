@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace CellarManager.model
 {
-    internal class Beverage
+    internal abstract class Beverage
     {
+        public string Name { get; set; }
+        public double Degree { get; set; }
+
+        protected Beverage(string name, double degree)
+        {
+            Name = name;
+            Degree = degree;
+        }
     }
 }
